@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
     "serve": "docker-compose up",
-    "node:standalone": "docker-compose up -d portal",
+    "node:standalone": "docker-compose up -d node-server",
     "stop": "docker stop $(docker ps -a -q)"
   },
   "repository": {

@@ -10,9 +10,9 @@ services:
       - /var/run/docker.sock:/tmp/docker.sock:ro
       - ./certs:/etc/nginx/certs
     links:
-      - portal:portal
+      - node-server:node-server
 
-  portal:
+  node-server:
     build: .
     container_name: app-container
     volumes:
@@ -21,3 +21,4 @@ services:
       - 3000:3000
     environment:
       - VIRTUAL_HOST=docker.nginx.node.com
+      - VIRTUAL_PORT=3000

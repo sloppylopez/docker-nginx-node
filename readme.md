@@ -6,13 +6,16 @@ Barebones Web Server & Application Server configuration template for Web develop
   * Docker-Compose
 
 ## Installation
+You need to add this line to your hosts file:
+```
+127.0.0.1 docker.nginx.node.com
+```
 
 ```bash
 $ npm install
 ```
 
-### Usage
-
+### Available commands
 Dockerless NodeJS Server
 ```bash
 $ npm start
@@ -32,8 +35,14 @@ Docker NodeJS Server Standalone
 ```bash
 $ npm run node:standalone
 ```
+### Usage
+```bash
+$ npm run serve
+```
 
+Then open a browser https://docker.nginx.node.com
 
-
+Enjoy!
+ڪ.
 
 
