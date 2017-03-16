@@ -14,8 +14,6 @@ stop -> docker stop $(docker ps -a -q) (Stop all Docker processes)
 
 node:standalone -> docker-compose up -d portal (Docker NodeJS Server Standalone)
 
-nginx:standalone -> docker-compose up -d nginx-proxy (Docker Nginx Standalone)
-
 
 
 
