@@ -1,5 +1,5 @@
 # Docker Nginx NodeJS
-Barebones Web Server & Application Server for Web development purposes
+Barebones Web Server & Application Server configuration template for Web development purposes
 
 ## Prerequisites
   * Docker
