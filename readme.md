@@ -5,14 +5,33 @@ Barebones Web Server & Application Server configuration template for Web develop
   * Docker
   * Docker-Compose
 
+## Installation
+
+```bash
+$ npm install
+```
+
 ### Usage
-start -> node index.js (Dockerless NodeJS Server)
 
-serve -> docker-compose up (Docker Nginx + Docker NodeJS Server connected using HTTPS and Custom Domain)
+Dockerless NodeJS Server
+```bash
+$ npm start
+```
 
-stop -> docker stop $(docker ps -a -q) (Stop all Docker processes)
+Docker Nginx + Docker NodeJS Server connected using HTTPS and Custom Domain
+```bash
+$ npm run serve
+```
 
-node:standalone -> docker-compose up -d portal (Docker NodeJS Server Standalone)
+Stop all Docker processes
+```bash
+$ npm run stop
+```
+
+Docker NodeJS Server Standalone
+```bash
+$ npm run node:standalone
+```
 
 
 
