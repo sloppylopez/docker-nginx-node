@@ -7,9 +7,13 @@ Barebones Web Server & Application Server for Web development purposes
 
 ### Usage
 start -> node index.js (Dockerless NodeJS Server)
+
 serve -> docker-compose up (Docker Nginx + Docker NodeJS Server connected using HTTPS and Custom Domain)
+
 stop -> docker stop $(docker ps -a -q) (Stop all Docker processes)
+
 node:standalone -> docker-compose up -d portal (Docker NodeJS Server Standalone)
+
 nginx:standalone -> docker-compose up -d nginx-proxy (Docker Nginx Standalone)
 
 
