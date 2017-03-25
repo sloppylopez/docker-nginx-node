@@ -2,14 +2,22 @@
 Barebones Web Server & Application Server configuration template for Web development purposes
 
 ## Prerequisites
-  * Docker
-  * Docker-Compose
+    * Docker
+    * Docker-Compose
+  
+##Features:
+    * Express Server
+    * Socket.io
+    * Correct use of Docker caches, fast builds
+    * Install inside Docker without root user
 
 ## Installation
 You need to add this line to your hosts file:
 ```
 127.0.0.1 docker.nginx.node.com
 ```
+
+then
 
 ```bash
 $ npm install
@@ -26,6 +34,11 @@ Docker Nginx + Docker NodeJS Server connected using HTTPS and Custom Domain
 $ npm run serve
 ```
 
+Build Docker image
+```bash
+$ npm run build
+```
+
 Stop all Docker processes
 ```bash
 $ npm run stop
@@ -40,9 +53,8 @@ $ npm run node:standalone
 $ npm run serve
 ```
 
-Then open a browser https://docker.nginx.node.com
+Open a browser https://docker.nginx.node.com
 
-Enjoy!
 ڪ.
 
 
