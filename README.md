@@ -17,6 +17,8 @@ You need to add this line to your hosts file:
 127.0.0.1 docker.nginx.node.com
 ```
 
+then
+
 ```bash
 $ npm install
 ```
@@ -30,6 +32,11 @@ $ npm start
 Docker Nginx + Docker NodeJS Server connected using HTTPS and Custom Domain
 ```bash
 $ npm run serve
+```
+
+Build Docker image
+```bash
+$ npm run build
 ```
 
 Stop all Docker processes
@@ -46,7 +53,7 @@ $ npm run node:standalone
 $ npm run serve
 ```
 
-Then open a browser https://docker.nginx.node.com
+Open a browser https://docker.nginx.node.com
 
 ڪ.
 
