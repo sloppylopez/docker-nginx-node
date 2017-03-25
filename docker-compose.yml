@@ -17,12 +17,12 @@ services:
     build: .
     container_name: node-container
     ports:
-      - 3000:3000
+      - 8080:8080
     volumes:
        - .:/home/sloppylopez
        - nodemodules:/home/sloppylopez/node_modules
     environment:
       - VIRTUAL_HOST=docker.nginx.node.com
-      - VIRTUAL_PORT=3000
+      - VIRTUAL_PORT=8080
 volumes:
   nodemodules:

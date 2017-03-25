@@ -1,11 +1,10 @@
-FROM node:4.3.2
+FROM node:6.10.1
 
 LABEL vendor=SloppyLopez\
-      com.elephantseed.version="0.0.1-beta" \
-      com.elephantseed.release-date="2017-03-25"
+      com.dnn.version="2.0.0" \
+      com.dnn.release-date="2017-03-25"
 
-RUN useradd -ms /bin/bash sloppylopez &&\
-  npm install --global npm@3.7.5
+RUN useradd -ms /bin/bash sloppylopez
 
 ENV HOME=/home/sloppylopez
 
