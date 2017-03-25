@@ -42,7 +42,6 @@ $ npm run serve
 
 Then open a browser https://docker.nginx.node.com
 
-Enjoy!
 ڪ.
 
 
