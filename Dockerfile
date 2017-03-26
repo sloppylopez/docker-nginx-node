@@ -1,6 +1,6 @@
 FROM node:6.10.1
 ENV HOME=/home/sloppylopez
-ENV JSPM_GITHUB_AUTH_TOKEN=c2xvcHB5bG9wZXo6MThOM20zczFz
+ENV JSPM_GITHUB_AUTH_TOKEN=
 
 LABEL vendor=SloppyLopez\
       com.whalephantseed.version="2.0.0" \
@@ -16,7 +16,6 @@ USER sloppylopez
 WORKDIR $HOME
 RUN npm i &&\
     cd app && npm i &&\
-    node_modules/.bin/jspm i --lock &&\
-    npm run dev
+    node_modules/.bin/jspm i --lock
 
 CMD ["node", "index.js"]

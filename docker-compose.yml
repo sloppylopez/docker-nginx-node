@@ -24,8 +24,6 @@ services:
       - .:/home/sloppylopez
       - nodemodules:/home/sloppylopez/node_modules
       - app:/home/sloppylopez/app
-      - jspm_modules:/home/sloppylopez/app/jspm_modules
-      - app-node_modules:/home/sloppylopez/app/node_modules
     environment:
       - VIRTUAL_HOST=docker.nginx.node.com
       - VIRTUAL_PORT=8080
@@ -33,5 +31,3 @@ services:
 volumes:
   app:
   nodemodules:
-  jspm_modules:
-  app-node_modules:
