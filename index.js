@@ -7,10 +7,10 @@ app.use('/', express.static('app'));
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/app/index.html');
 });
-
-app.get('/chat', function(req, res){
-  res.sendFile(__dirname + '/app/chat.html');
-});
+//TODO fix me.
+// app.get('/chat', function(req, res){
+//   res.sendFile(__dirname + '/app/chat.html');
+// });
 
 io.on('connection', function(socket){
   socket.on('chat message', function(msg){

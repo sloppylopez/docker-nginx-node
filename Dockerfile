@@ -3,14 +3,14 @@ ENV HOME=/home/whalephant
 ENV JSPM_GITHUB_AUTH_TOKEN=c2xvcHB5bG9wZXo6MThOM20zczFz
 
 LABEL vendor=SloppyLopez\
-      com.whalephant.version="1.0.0" \
-      com.whalephant.release-date="2017-03-25"
+      com.whalephant-seed.version="1.0.0" \
+      com.whalephant-seed.release-date="2017-03-25"
 
 RUN useradd -ms /bin/bash whalephant
 
-ADD app $HOME/app
+#ADD app $HOME/app
 COPY package.json npm-shrinkwrap.json $HOME/
-COPY app/package.json npm-shrinkwrap.json $HOME/
+COPY app/package.json app/npm-shrinkwrap.json app/config.js $HOME/app/
 RUN chown -R whalephant:whalephant $HOME/*
 
 USER whalephant

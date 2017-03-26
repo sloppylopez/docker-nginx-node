@@ -10,9 +10,17 @@
     "build": "docker-compose build",
     "node:standalone": "docker-compose up -d node-server",
     "stop": "docker stop $(docker ps -a -q)",
-    "build-css": "bin/build-css",
+    "dev": "bin/dev",
+    "prod": "bin/prod",
+    "bundle": "bin/bundle",
     "unbundle": "bin/unbundle",
-    "dev": "bin/dev"
+    "minify": "bin/minify",
+    "minify-sfx": "bin/minify-sfx",
+    "build-css": "bin/build-css",
+    "depcache": "bin/depcache",
+    "cache-clear": "bin/cache-clear",
+    "lookup": "bin/lookup",
+    "clean-tree": "bin/clean-tree"
   },
   "repository": {
     "type": "git",

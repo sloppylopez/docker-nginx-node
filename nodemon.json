@@ -25,7 +25,7 @@
     "js": "node --harmony"
   },
   "events": {
-    "restart": "NODEMON Restarting"
+    "restart": "Restarting in a blink"
   },
   "watch": [
     "app/",
