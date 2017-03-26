@@ -19,11 +19,19 @@ services:
     container_name: node-container
     ports:
       - 8080:8080
+      - 5858:5858
     volumes:
-       - .:/home/sloppylopez
-       - nodemodules:/home/sloppylopez/node_modules
+      - .:/home/sloppylopez
+      - nodemodules:/home/sloppylopez/node_modules
+      - app:/home/sloppylopez/app
+      - jspm_modules:/home/sloppylopez/app/jspm_modules
+      - app-node_modules:/home/sloppylopez/app/node_modules
     environment:
       - VIRTUAL_HOST=docker.nginx.node.com
       - VIRTUAL_PORT=8080
+
 volumes:
+  app:
   nodemodules:
+  jspm_modules:
+  app-node_modules:

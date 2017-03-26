@@ -1,4 +1,4 @@
-##!/usr/bin/env bash
+#!/usr/bin/env bash
 ## Stop all containers
 #docker stop $(docker ps -a -q)
 ## Delete all containers

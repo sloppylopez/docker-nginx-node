@@ -48,10 +48,33 @@ Docker NodeJS Server Standalone
 ```bash
 $ npm run node:standalone
 ```
-### Usage
+
+Testing through Docker container from host
 ```bash
-$ npm run serve
+$ docker-compose run --rm node-server /bin/bash -c 'npm test'
 ```
+
+### Pitfalls
+In case you see this message:
+
+         Updating registry cache...
+         Looking up github:twbs/bootstrap
+         Downloading github:twbs/bootstrap@3.3.1
+    
+    err  Error downloading github:twbs/bootstrap
+    
+         GitHub rate limit reached. To increase the limit use GitHub authentication.
+         Run jspm endpoint config github to set this up.
+    
+    warn Installation changes not saved.
+
+You will need to pass your JSPM_GITHUB_AUTH_TOKEN to the seed, to do so just type:
+
+```bash
+$ jspm registry export github
+```
+
+And copy the value of registries.github.auth in Dockerfile <JSPM_GITHUB_AUTH_TOKEN>  
 
 Open a browser https://docker.nginx.node.com
 
