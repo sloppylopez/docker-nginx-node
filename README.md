@@ -53,6 +53,7 @@ Testing through Docker container from host
 ```bash
 $ docker-compose run --rm node-server /bin/bash -c 'npm test'
 ```
+Open a browser https://docker.nginx.node.com
 
 ### Pitfalls
 In case you see this message:
@@ -75,9 +76,7 @@ $ jspm registry export github
 ```
 
 And copy the value of registries.github.auth in Dockerfile <JSPM_GITHUB_AUTH_TOKEN>  
-
-Open a browser https://docker.nginx.node.com
-
+Notice that you will need a global jspm installed in your HOST machine do do this task
 ڪ.
 
 

@@ -1,18 +1,18 @@
 FROM node:6.10.1
-ENV HOME=/home/sloppylopez
+ENV HOME=/home/whalephant
 ENV JSPM_GITHUB_AUTH_TOKEN=
 
 LABEL vendor=SloppyLopez\
-      com.whalephantseed.version="2.0.0" \
-      com.whalephantseed.release-date="2017-03-25"
+      com.whalephant.version="2.0.0" \
+      com.whalephant.release-date="2017-03-25"
 
-RUN useradd -ms /bin/bash sloppylopez
+RUN useradd -ms /bin/bash whalephant
 
 ADD app $HOME/app
 COPY package.json npm-shrinkwrap.json $HOME/
-RUN chown -R sloppylopez:sloppylopez $HOME/*
+RUN chown -R whalephant:whalephant $HOME/*
 
-USER sloppylopez
+USER whalephant
 WORKDIR $HOME
 RUN npm i &&\
     cd app && npm i &&\
