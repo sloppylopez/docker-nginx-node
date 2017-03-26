@@ -3,5 +3,5 @@ npm-debug.log
 .bash_history
 .config
 app/node_modules
-app/jspm_modules
+app/jspm_packages
 .jspm

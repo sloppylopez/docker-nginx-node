@@ -8,14 +8,14 @@ services:
       - 443:443
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
-      - ./certs:/etc/nginx/certs
+      - certs:/etc/nginx/certs
 #      - ./conf:/etc/nginx/conf.d
     links:
       - node-server:node-server
 
   node-server:
     build: .
-    command: ./node_modules/.bin/nodemon --debug=5858 --watch app/*
+    command: node_modules/.bin/nodemon --debug=5858 --config nodemon.json
     container_name: node-container
     ports:
       - 8080:8080
@@ -31,3 +31,4 @@ services:
 volumes:
   app:
   nodemodules:
+  certs:

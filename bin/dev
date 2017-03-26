@@ -1,0 +1,2 @@
+docker exec $1 npm run unbundle
+docker exec $1 npm run build-css

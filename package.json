@@ -9,7 +9,10 @@
     "serve": "docker-compose up",
     "build": "docker-compose build",
     "node:standalone": "docker-compose up -d node-server",
-    "stop": "docker stop $(docker ps -a -q)"
+    "stop": "docker stop $(docker ps -a -q)",
+    "build-css": "bin/build-css",
+    "unbundle": "bin/unbundle",
+    "dev": "bin/dev"
   },
   "repository": {
     "type": "git",
@@ -19,11 +22,13 @@
     "docker",
     "nginx",
     "node",
+    "jspm",
+    "react",
     "slushgenerator",
     "slush"
   ],
   "author": "Sloppy Lopez",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/sloppylopez/docker-nginx-node/issues"
   },

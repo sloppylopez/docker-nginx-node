@@ -1,0 +1,3 @@
+cd app &&\
+./node_modules/.bin/jspm bundle app dist/bundle.js --inject --minify  &&\
+./node_modules/.bin/jspm bundle-sfx app dist/bundle.js --inject --minify
