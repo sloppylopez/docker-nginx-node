@@ -8,7 +8,6 @@ LABEL vendor=SloppyLopez\
 
 RUN useradd -ms /bin/bash whalephant
 
-#ADD app $HOME/app
 COPY package.json npm-shrinkwrap.json $HOME/
 COPY app/package.json app/npm-shrinkwrap.json app/config.js $HOME/app/
 RUN chown -R whalephant:whalephant $HOME/*
@@ -19,4 +18,4 @@ RUN npm i &&\
     cd app && npm i &&\
     node_modules/.bin/jspm i --lock
 
-CMD ["node", "index.js"]
+CMD ["node", "server.js"]

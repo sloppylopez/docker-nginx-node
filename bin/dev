@@ -1,2 +1,2 @@
-docker exec $1 npm run unbundle
-docker exec $1 npm run build-css
+docker exec `bin/get-containerid-by-imagename` npm run unbundle
+docker exec `bin/get-containerid-by-imagename` npm run build-css

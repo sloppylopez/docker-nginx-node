@@ -2,10 +2,10 @@
   "name": "docker-nginx-node",
   "version": "2.0.1",
   "description": "Docker Nginx Node",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
+    "start": "node server.js",
     "serve": "docker-compose up",
     "build": "docker-compose build",
     "node:standalone": "docker-compose up -d node-server",

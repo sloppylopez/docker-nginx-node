@@ -17,20 +17,16 @@
     "*.md",
     "LICENSE",
     "*.yml",
-    "Dockerfile",
-    "nodemon.json"
+    "Dockerfile"
   ],
   "verbose": true,
   "execMap": {
     "js": "node --harmony"
   },
-  "events": {
-    "restart": "Restarting in a blink"
-  },
   "watch": [
     "app/",
     "certs/",
-    "index.js"
+    "server.js"
   ],
   "env": {
     "NODE_ENV": "development"
