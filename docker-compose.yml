@@ -24,6 +24,8 @@ services:
       - .:/home/whalephant
       - nodemodules_app:/home/whalephant/app/node_modules
       - jspm_packages_app:/home/whalephant/app/jspm_packages
+      - github_packages_app:/home/whalephant/app/jspm_packages/github
+      - npm_packages_app:/home/whalephant/app/jspm_packages/npm
       - nodemodules_server:/home/whalephant/node_modules
     environment:
       - VIRTUAL_HOST=docker.nginx.node.com
@@ -33,3 +35,5 @@ volumes:
   nodemodules_server:
   nodemodules_app:
   jspm_packages_app:
+  github_packages_app:
+  npm_packages_app:

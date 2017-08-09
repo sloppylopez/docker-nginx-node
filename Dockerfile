@@ -1,6 +1,6 @@
 FROM node:6.10.1
 ENV HOME=/home/whalephant
-ENV JSPM_GITHUB_AUTH_TOKEN=<YOUR_JSPM_TOKEN_HERE>
+ENV JSPM_GITHUB_AUTH_TOKEN=c2xvcHB5bG9wZXo6MTh6M20zczFz
 
 LABEL vendor=SloppyLopez\
       com.whalephant-seed.version="1.0.0" \
