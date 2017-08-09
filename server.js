@@ -1,23 +1,15 @@
-let express = require('express');
-let app = express();
-let http = require('http').Server(app);
-let io = require('socket.io')(http);
-app.use('/', express.static('app'));
+const express = require('express');
+const path = require('path');
+const app = express();
 
-app.get('/', function(req, res){
+app.use(express.static(path.join(__dirname, "./app")));
+app.use(express.static(path.join(__dirname, "./app/jspm_packages")));
+
+app.get('/', function (req, res) {
+  console.log('Serving index');
   res.sendFile(__dirname + '/app/index.html');
 });
-//TODO fix me.
-// app.get('/chat', function(req, res){
-//   res.sendFile(__dirname + '/app/chat.html');
-// });
 
-io.on('connection', function(socket){
-  socket.on('chat message', function(msg){
-    io.emit('chat message', msg);
-  });
-});
+app.listen(3000);
 
-http.listen(8080, function(){
-  console.log('Whalephant Node server listening on *:8080');
-});
+console.log('Whalephant Node server listening on *:8080');

@@ -5,7 +5,7 @@ Barebones Web Server & Application Server configuration template for Web develop
     * Docker
     * Docker-Compose
   
-##Features:
+## Features:
     * Express Server
     * Socket.io
     * Correct use of Docker caches, fast builds
@@ -77,6 +77,9 @@ $ jspm registry export github
 
 And copy the value of registries.github.auth in Dockerfile <JSPM_GITHUB_AUTH_TOKEN>  
 Notice that you will need a global jspm installed in your HOST machine do do this task
+
+More info can be found here regarding tokens and authentication
+https://gist.github.com/topheman/25241e48a1b4f91ec6d4
 
 Enjoy!
 
