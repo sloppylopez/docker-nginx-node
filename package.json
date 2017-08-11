@@ -1,34 +1,48 @@
 {
   "name": "docker-nginx-node",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Docker Nginx Node",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "serve": "docker-compose up",
-    "build": "docker-compose build",
-    "node:standalone": "docker-compose up -d node-server",
-    "stop": "docker stop $(docker ps -a -q)"
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "start": "bin/start",
+    "serve": "bin/serve",
+    "build": "bin/build",
+    "node:standalone": "bin/node-standalone",
+    "stop": "bin/stop",
+    "dev": "bin/dev",
+    "prod": "bin/prod",
+    "bundle": "bin/bundle",
+    "unbundle": "bin/unbundle",
+    "minify": "bin/minify",
+    "minify-sfx": "bin/minify-sfx",
+    "build-css": "bin/build-css",
+    "depcache": "bin/depcache",
+    "cache-clear": "bin/cache-clear",
+    "lookup": "bin/lookup",
+    "clean-tree": "bin/clean-tree"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sloppylopez/docker-nginx-node.git"
   },
   "keywords": [
-    "Docker",
-    "Nginx",
-    "Node"
+    "docker",
+    "nginx",
+    "node",
+    "jspm",
+    "react",
+    "slushgenerator",
+    "slush"
   ],
   "author": "Sloppy Lopez",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/sloppylopez/docker-nginx-node/issues"
   },
   "homepage": "https://github.com/sloppylopez/docker-nginx-node#readme",
   "devDependencies": {
     "express": "^4.15.2",
-    "nodemon": "^1.11.0",
-    "socket.io": "^1.7.3"
+    "nodemon": "^1.11.0"
   }
 }

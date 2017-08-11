@@ -1,18 +1,21 @@
 FROM node:6.10.1
+ENV HOME=/home/whalephant
+ENV JSPM_GITHUB_AUTH_TOKEN=${JSPM_GITHUB_AUTH_TOKEN}
 
 LABEL vendor=SloppyLopez\
-      com.dnn.version="2.0.0" \
-      com.dnn.release-date="2017-03-25"
+      com.whalephant-seed.version="1.0.0" \
+      com.whalephant-seed.release-date="2017-03-25"
 
-RUN useradd -ms /bin/bash sloppylopez
-
-ENV HOME=/home/sloppylopez
+RUN useradd -ms /bin/bash whalephant
 
 COPY package.json npm-shrinkwrap.json $HOME/
-RUN chown -R sloppylopez:sloppylopez $HOME/*
+COPY app/package.json app/npm-shrinkwrap.json app/config.js $HOME/app/
+RUN chown -R whalephant:whalephant $HOME/*
 
-USER sloppylopez
+USER whalephant
 WORKDIR $HOME
-RUN npm install
+RUN npm i &&\
+    cd app && npm i &&\
+    node_modules/.bin/jspm i --lock
 
-CMD ["node", "index.js"]
+CMD ["node", "server.js"]
