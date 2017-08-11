@@ -26,14 +26,12 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run:
-          - yarn install
-          - ./node_modules/.bin/jspm install
+      - run: yarn install
+      - run: ./node_modules/.bin/jspm install
 
       - save_cache:
           paths:
             - node_modules
-            - jspm_packages
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!!
