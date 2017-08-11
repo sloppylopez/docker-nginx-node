@@ -27,7 +27,10 @@ jobs:
           - v1-dependencies-
 
       - run: yarn install
-      - run: ./node_modules/.bin/jspm install
+      - run: ls -thrall
+      - run: cd app
+      - run: ls -thrall
+      - run: ./node_modules/.bin/jspm i
 
       - save_cache:
           paths:
