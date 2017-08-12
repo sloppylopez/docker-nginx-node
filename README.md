@@ -7,7 +7,6 @@ Barebones Web Server & Application Server configuration template for Web develop
   
 ## Features:
     * Express Server
-    * Socket.io
     * Correct use of Docker caches, fast builds
     * Install inside Docker without root user
 
@@ -53,7 +52,16 @@ Testing through Docker container from host
 ```bash
 $ docker-compose run --rm node-server /bin/bash -c 'npm test'
 ```
-Open a browser https://docker.nginx.node.com
+
+### Application Home page
+[https://docker.nginx.node.com](#https://docker.nginx.node.com)
+
+### Workflow example
+
+    1)npm run clean:docker
+    2)npm run serve
+    3)[https://docker.nginx.node.com](#https://docker.nginx.node.com)
+    4)Make a change in [https://docker.nginx.node.com](#https://docker.nginx.node.com)
 
 ### Pitfalls
 In case you see this message:

@@ -14,7 +14,11 @@ services:
       - node-server:node-server
 
   node-server:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - JSPM_GITHUB_AUTH_TOKEN=$JSPM_GITHUB_AUTH_TOKEN
     command: node_modules/.bin/nodemon --debug=5858
     container_name: node-container
     ports:

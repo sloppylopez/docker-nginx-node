@@ -8,7 +8,6 @@ app.use(express.static(path.join(__dirname, "./app/jspm_packages/github")));
 app.use(express.static(path.join(__dirname, "./app/jspm_packages/npm")));
 
 app.get('/', function (req, res) {
-  console.log('Serving index');
   res.sendFile(__dirname + '/app/index.html');
 });
 

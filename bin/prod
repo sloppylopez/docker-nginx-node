@@ -1,2 +1,2 @@
-docker exec `bin/get-containerid-by-imagename` npm run build-css
+docker exec `bin/get-containerid-by-imagename` npm run build:css
 docker exec `bin/get-containerid-by-imagename` npm run minify-sfx

@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/node:6.9
+      - image: circleci/node:6.10
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -26,17 +26,17 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run:
-          - yarn install
-          - ./node_modules/.bin/jspm install
+      - run: yarn install
+      - run: ls -thrall
+      - run: cd app && ls -thrall && yarn install && ./node_modules/.bin/jspm i
+      - run: cd app && ls -thrall
 
       - save_cache:
           paths:
             - node_modules
-            - jspm_packages
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      # run tests!
+      # run tests!!
       - run: yarn test
 
 
