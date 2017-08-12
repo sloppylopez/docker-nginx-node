@@ -14,10 +14,14 @@ services:
       - node-server:node-server
 
   node-server:
-    build: .
-      container_name: node-container
-      ports:
-        - 8080:8080
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - JSPM_GITHUB_AUTH_TOKEN=$JSPM_GITHUB_AUTH_TOKEN
+    container_name: node-container
+    ports:
+      - 8080:8080
     environment:
       - VIRTUAL_HOST=docker.nginx.node.com
       - VIRTUAL_PORT=8080

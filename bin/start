@@ -1,1 +1,3 @@
+npm run stop
+npm run bundle
 node server.js

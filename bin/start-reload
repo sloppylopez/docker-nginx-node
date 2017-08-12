@@ -1,0 +1,3 @@
+npm run stop reload
+npm run bundle
+node_modules/.bin/nodemon --debug=5858 server.js

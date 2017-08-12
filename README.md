@@ -7,12 +7,12 @@ Barebones Web Server & Application Server configuration template for Web develop
   
 ## Features:
     * Express Server
-    * Socket.io
     * Correct use of Docker caches, fast builds
     * Install inside Docker without root user
 
 ## Installation
 You need to add this line to your hosts file:
+
 ```
 127.0.0.1 docker.nginx.node.com
 ```
@@ -53,7 +53,17 @@ Testing through Docker container from host
 ```bash
 $ docker-compose run --rm node-server /bin/bash -c 'npm test'
 ```
-Open a browser https://docker.nginx.node.com
+
+### Application Home page
+[https://docker.nginx.node.com](#https://docker.nginx.node.com)
+
+### Workflow example
+
+#### Run app on NodeJS server in local
+    1)npm run clean:docker
+    2)npm start:reload
+    3)Open browser at http://docker.nginx.node.com:8080/
+    4
 
 ### Pitfalls
 In case you see this message:
