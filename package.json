@@ -16,11 +16,12 @@
     "unbundle": "bin/unbundle",
     "minify": "bin/minify",
     "minify-sfx": "bin/minify-sfx",
-    "build-css": "bin/build-css",
+    "build:css": "bin/build-css",
     "depcache": "bin/depcache",
     "cache-clear": "bin/cache-clear",
     "lookup": "bin/lookup",
-    "clean-tree": "bin/clean-tree"
+    "clean:tree": "bin/clean-tree",
+    "clean:docker": "bin/clean-docker"
   },
   "repository": {
     "type": "git",
