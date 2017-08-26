@@ -9,23 +9,25 @@
     "npm-shrinkwrap.json",
     "yarn.lock",
     "*.sh",
-    "node_modules/**/node_modules",
+    "node_modules",
     "app/node_modules/**/node_modules",
-    "app/jspm_packages/github/**",
-    "app/jspm_packages/npm/**",
+    "app/jspm_packages/**/*",
     "bin",
     "conf",
     "*.md",
     "LICENSE",
     "*.yml",
-    "Dockerfile"
+    "Dockerfile",
+    "app/config.js"
   ],
   "verbose": true,
   "execMap": {
     "js": "node --harmony"
   },
   "watch": [
-    "app/",
+    "app/components",
+    "app/stylesheets",
+    "app/app.js",
     "certs/",
     "server.js"
   ],

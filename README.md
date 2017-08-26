@@ -1,5 +1,5 @@
 # Docker Nginx NodeJS
-Barebones Web Server & Application Server configuration template for Web development purposes
+Enterprise level bare bones Web Server & Application Server configuration template for Web development purposes
 
 ## Prerequisites
     * Docker
