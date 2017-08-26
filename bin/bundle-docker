@@ -1,0 +1,2 @@
+docker exec `bin/utils/get-containerid-by-imagename` npm run buildcss:nodesass
+docker exec `bin/utils/get-containerid-by-imagename` npm run minifysfx:jspm

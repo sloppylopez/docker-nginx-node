@@ -1,1 +1,2 @@
-docker stop $(docker ps -a -q)
+#npm run stop:node
+docker-compose stop

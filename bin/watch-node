@@ -1,3 +1,2 @@
-npm run stop reload
-npm run bundle
+npm run unwatch:node
 node_modules/.bin/nodemon --debug=5858 server.js
