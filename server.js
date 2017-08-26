@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const browserSync = require('browser-sync');
 const app = express();
 const PORT = 8080;
 
@@ -14,3 +15,10 @@ app.get('/', function (req, res) {
 app.listen(PORT);
 
 console.log(`Whalephant Node server listening on *:${PORT}`);
+
+browserSync.init(null, {
+  proxy: `http://docker.nginx.node.com:${PORT}`,
+  files: ["public/**/*.*"],
+  browser: "google chrome",
+  port: 7000,
+});

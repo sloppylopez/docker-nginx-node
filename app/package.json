@@ -34,6 +34,10 @@
       "systemjs-hot-reloader": "npm:systemjs-hot-reloader@^1.1.0",
       "url": "npm:jspm-nodelibs-url@^0.2.0"
     },
+    "buildConfig": {
+      "transpileES6": true,
+      "minify": true
+    },
     "overrides": {
       "npm:babel-runtime@5.8.38": {
         "main": false,
