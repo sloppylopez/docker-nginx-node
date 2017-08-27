@@ -50,6 +50,7 @@
   "devDependencies": {
     "browser-sync": "^2.18.13",
     "express": "^4.15.2",
-    "nodemon": "^1.11.0"
+    "jspm": "^0.16.53",
+    "shelljs": "^0.7.8"
   }
 }

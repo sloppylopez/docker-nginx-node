@@ -20,7 +20,7 @@ class AcmeBody extends Component {
                         <h1>A little bit of frictionless!!</h1>
 
                         <p>
-                            Vaseline driven browser side
+                            Vaseline driven Docker
                             boiler-plate annihilation. Period
                         </p>
 
