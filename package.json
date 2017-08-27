@@ -13,8 +13,6 @@
     "unbundle:docker": "bin/unbundle-docker",
     "start:node": "bin/start-node",
     "stop:node": "bin/stop-node",
-    "watch:node": "bin/watch-node",
-    "unwatch:node": "bin/unwatch-node",
     "compose:build": "bin/compose-build",
     "docker:node-standalone": "bin/docker-node-standalone",
     "bundle:node": "bin/bundle-node",

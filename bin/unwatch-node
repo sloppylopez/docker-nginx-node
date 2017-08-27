@@ -1,1 +1,0 @@
-kill -9 $(ps -ef | grep 5858 | awk '{print $2}' | uniq)
