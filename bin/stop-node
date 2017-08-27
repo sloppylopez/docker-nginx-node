@@ -1,1 +1,0 @@
-kill -9 $(lsof -i | grep 'node' | awk '{print $2}' | uniq)

@@ -52,12 +52,14 @@
       "npm:inherits@2.0.1": {
         "ignore": [
           "test.js",
+          "node_modules",
           "node_modules"
         ]
       },
       "npm:inherits@2.0.3": {
         "ignore": [
           "test.js",
+          "node_modules",
           "node_modules"
         ]
       },

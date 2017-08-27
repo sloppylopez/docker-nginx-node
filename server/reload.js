@@ -2,9 +2,9 @@ const fs = require('fs');
 const path = require('path');
 const shell = require('shelljs');
 
-const DIST_FOLDER = path.join(__dirname, "../app/dist");
-const BUNDLE = 'npm run bundle:node';
-const UNBUNDLE = 'npm run unbundle:node';
+const DIST_FOLDER = path.join(__dirname, '../app/dist');
+const BUNDLE = 'npm run bundle:jspm';
+const UNBUNDLE = 'npm run unbundle:jspm';
 
 function reloadChanges(bs) {
   fs.readdir(DIST_FOLDER, function (err, files) {

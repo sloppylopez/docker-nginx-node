@@ -1,2 +1,0 @@
-docker exec `bin/utils/get-containerid-by-imagename` npm run unbundle:node
-docker exec `bin/utils/get-containerid-by-imagename` npm run buildcss:nodesass
