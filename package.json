@@ -4,30 +4,26 @@
   "description": "Docker Nginx Node",
   "main": "server.js",
   "scripts": {
-    "test":                   "echo \"Error: no test specified\" && exit 0",
-    "start":                  "npm run start:node",
-
-    "start:docker":           "bin/docker/start --",
-    "stop:docker":            "bin/docker/stop --",
-    "compose:build":          "bin/docker/compose",
-    "clean:docker":           "bin/docker/clean",
-    "exec:docker":           "bin/docker/clean --",
-
-    "start:node":             "bin/node/start",
-    "stop:node":              "bin/node/stop",
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "start": "npm run start:node",
+    "start:docker": "bin/docker/start --",
+    "stop:docker": "bin/docker/stop --",
+    "compose:build": "bin/docker/compose",
+    "clean:docker": "bin/docker/clean",
+    "exec:docker": "bin/docker/clean --",
+    "start:node": "bin/node/start",
+    "stop:node": "bin/node/stop",
     "docker:node-standalone": "bin/node/docker-standalone",
-
-    "build:jspm":             "bin/jspm/build",
-    "bundle:jspm":            "bin/jspm/bundle",
-    "unbundle:jspm":          "bin/jspm/unbundle",
-    "minify:jspm":            "bin/jspm/minify",
-    "minifysfx:jspm":         "bin/jspm/minifysfx",
-    "depcache:jspm":          "bin/jspm/depcache",
-    "cacheclear:jspm":        "bin/jspm/cacheclear",
-    "lookup:jspm":            "bin/jspm/lookup",
-    "cleantree:jspm":         "bin/jspm/cleantree",
-
-    "buildcss:nodesass":      "bin/nodesass/buildcss"
+    "build:jspm": "bin/jspm/build",
+    "bundle:jspm": "bin/jspm/bundle",
+    "unbundle:jspm": "bin/jspm/unbundle",
+    "minify:jspm": "bin/jspm/minify",
+    "minifysfx:jspm": "bin/jspm/minifysfx",
+    "depcache:jspm": "bin/jspm/depcache",
+    "cacheclear:jspm": "bin/jspm/cacheclear",
+    "lookup:jspm": "bin/jspm/lookup",
+    "cleantree:jspm": "bin/jspm/cleantree",
+    "buildcss:nodesass": "bin/nodesass/buildcss"
   },
   "repository": {
     "type": "git",
@@ -50,6 +46,7 @@
   "homepage": "https://github.com/sloppylopez/docker-nginx-node#readme",
   "devDependencies": {
     "browser-sync": "^2.18.13",
+    "chalk": "^2.1.0",
     "express": "^4.15.2",
     "jspm": "^0.16.53",
     "shelljs": "^0.7.8"

@@ -15,7 +15,7 @@ RUN useradd -ms /bin/bash $USER
 
 #Copy files to container
 COPY package.json yarn.lock $HOME/
-ADD server $HOME/
+ADD server/node $HOME/
 COPY app/package.json app/yarn.lock app/config.js $HOME/app/
 RUN chown -R $USER:$USER $HOME/*
 

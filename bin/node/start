@@ -1,2 +1,2 @@
 npm run stop:node
-node server/server
+node server/node/server
