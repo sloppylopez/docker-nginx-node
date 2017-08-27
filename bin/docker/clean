@@ -1,4 +1,4 @@
 npm run stop:docker
-docker rm $(docker ps -a -q)
+docker rm $(docker ps -aqf "name=node-container")
 docker rmi dockernginxnode_node-server
 docker system prune -f

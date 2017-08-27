@@ -1,2 +1,2 @@
-npm run stop:docker
+npm run stop:node
 docker-compose up

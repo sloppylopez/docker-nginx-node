@@ -6,14 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
     "start": "npm run start:node",
-    "start:docker": "bin/docker/start --",
-    "stop:docker": "bin/docker/stop --",
-    "compose:build": "bin/docker/compose",
-    "clean:docker": "bin/docker/clean",
-    "exec:docker": "bin/docker/clean --",
-    "start:node": "bin/node/start",
-    "stop:node": "bin/node/stop",
-    "docker:node-standalone": "bin/node/docker-standalone",
     "build:jspm": "bin/jspm/build",
     "bundle:jspm": "bin/jspm/bundle",
     "unbundle:jspm": "bin/jspm/unbundle",
@@ -23,7 +15,16 @@
     "cacheclear:jspm": "bin/jspm/cacheclear",
     "lookup:jspm": "bin/jspm/lookup",
     "cleantree:jspm": "bin/jspm/cleantree",
-    "buildcss:nodesass": "bin/nodesass/buildcss"
+    "buildcss:nodesass": "bin/nodesass/buildcss",
+    "start:docker": "bin/docker/start",
+    "stop:docker": "bin/docker/stop",
+    "build:docker": "bin/docker/build",
+    "clean:docker": "bin/docker/clean",
+    "exec:docker": "bin/docker/exec",
+    "enter:docker": "bin/docker/enter",
+    "start:node": "bin/node/start",
+    "stop:node": "bin/node/stop",
+    "node:docker-standalone": "bin/node/docker-standalone"
   },
   "repository": {
     "type": "git",

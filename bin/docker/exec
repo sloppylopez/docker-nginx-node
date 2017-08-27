@@ -1,1 +1,1 @@
-docker exec `bin/utils/get-containerid-by-imagename` $1
+docker exec `bin/utils/get-containerid-by-imagename` $@

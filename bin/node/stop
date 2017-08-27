@@ -1,1 +1,1 @@
-kill -9 $(lsof -i | grep 'node' | awk '{print $2}' | uniq) &>/dev/null || echo "No running Node processes found to stop... continuing"
+kill -9 $(ps -ef | grep 'node' | awk '{print $2}' | uniq) &>/dev/null || echo "No running Node processes found to stop... continuing"

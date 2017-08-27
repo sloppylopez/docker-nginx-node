@@ -39,9 +39,14 @@ Stop Docker process
 $ npm run stop:docker
 ```
 
-Testing through Docker container from host
+Run arbitrary command inside the container
 ```bash
-$ docker-compose run --rm node-server /bin/bash -c 'npm test'
+$ npm run exec:docker -- echo 'I am inside the container'
+```
+
+Run arbitrary command inside the container (docker natively)
+```bash
+$ docker-compose run --rm node-server /bin/bash -c 'echo "I am inside the container"'
 ```
 
 ### Application Home page
