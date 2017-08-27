@@ -15,4 +15,4 @@ app.get('/', function (req, res) {
 
 app.listen(PORT);
 
-console.log(`Whalephant Node server listening on *:${PORT}`);
+console.log(`Node server listening on *:${PORT}`);
