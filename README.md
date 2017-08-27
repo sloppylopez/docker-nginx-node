@@ -31,22 +31,12 @@ $ npm start
 
 Docker Nginx + Docker NodeJS Server connected using HTTPS and Custom Domain
 ```bash
-$ npm run serve
+$ npm run start:docker
 ```
 
-Build Docker image
+Stop Docker process
 ```bash
-$ npm run build
-```
-
-Stop all Docker processes
-```bash
-$ npm run stop
-```
-
-Docker NodeJS Server Standalone
-```bash
-$ npm run node:standalone
+$ npm run stop:docker
 ```
 
 Testing through Docker container from host
@@ -63,7 +53,6 @@ $ docker-compose run --rm node-server /bin/bash -c 'npm test'
     1)npm run clean:docker
     2)npm start:reload
     3)Open browser at http://docker.nginx.node.com:8080/
-    4
 
 ### Pitfalls
 In case you see this message:

@@ -75,39 +75,36 @@ $ jspm i
 
 * If Slush installer asks you to overwrite files due to conflicts press 'a' (Overwrite All)
 
-## After installation:Npm commands
-
-Disable dependencies cache, unbundle and unminify js files , scss2css:
-
+### Available commands
+Dockerless NodeJS Server
 ```bash
-$ npm run dev
-or
 $ npm start
 ```
 
-Enable dependencies cache, bundle and minify, scss2css:
-I strongly advise you to use this command for everything,
-for running the project while developing, and for making the
-package just before releasing the code in production doing
-`npm run prod` simply because it loads the page 4 times faster
-and you can still debug and enjoy the goodies of having a
-source map plus the build time it's practically the same
-as using `npm run dev`.
- 
+Docker Nginx + Docker NodeJS Server connected using HTTPS and Custom Domain
 ```bash
-$ npm run prod
+$ npm run start:docker
 ```
 
-Run ESlint
+Stop Docker process
 ```bash
-$ npm run eslint
+$ npm run stop:docker
 ```
 
-Deploy in Firebase (you have to login via command line in your OWN account):
-
+Testing through Docker container from host
 ```bash
-$ firebase deploy
+$ docker-compose run --rm node-server /bin/bash -c 'npm test'
 ```
+
+### Application Home page
+[https://docker.nginx.node.com](#https://docker.nginx.node.com)
+
+### Workflow example
+
+#### Run app on NodeJS server in local
+    1)npm run clean:docker
+    2)npm start:reload
+    3)Open browser at http://docker.nginx.node.com:8080/
 
 ## Common Pitfalls
 
