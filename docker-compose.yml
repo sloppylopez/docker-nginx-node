@@ -18,7 +18,7 @@ services:
       dockerfile: Dockerfile
       args:
         - JSPM_GITHUB_AUTH_TOKEN=$JSPM_GITHUB_AUTH_TOKEN
-    command: npm start
+    command: npm start && echo 'ᕕ( ᐛ )ᕗ'
     container_name: node-container
     ports:
       - 8080:8080

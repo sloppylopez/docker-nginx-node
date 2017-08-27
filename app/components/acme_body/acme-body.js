@@ -8,8 +8,7 @@ import AcmeListGroup from "./acme_list_group/acme-list-group";
 export default
 class AcmeBody extends Component {
     render() {
-
-        return ((
+        return (
             <div className="container">
                 <div className="jumbotron">
                     <div className="container">
@@ -28,7 +27,6 @@ class AcmeBody extends Component {
                 </div>
                 <AcmeListGroup></AcmeListGroup>
             </div>
-        ));
-
+        );
     }
 }

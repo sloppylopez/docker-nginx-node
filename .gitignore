@@ -43,3 +43,4 @@ conf/default.conf
 .config
 .jspm
 .npmrc
+container_settings.json
