@@ -14,6 +14,7 @@ LABEL vendor=SloppyLopez\
 RUN useradd -ms /bin/bash $USER
 
 COPY package.json yarn.lock $HOME/
+ADD server $HOME/
 COPY app/package.json app/yarn.lock app/config.js $HOME/app/
 RUN chown -R $USER:$USER $HOME/*
 
@@ -29,4 +30,4 @@ RUN cd app &&\
     ./node_modules/.bin/jspm config registries.github.auth $JSPM_GITHUB_AUTH_TOKEN &&\
     ./node_modules/.bin/jspm i --lock
 
-CMD ["node", "server"]
+CMD ["npm", "start"]

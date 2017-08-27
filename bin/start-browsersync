@@ -1,1 +1,0 @@
-node_modules/.bin/browser-sync start -p "docker.nginx.node.com:8080"

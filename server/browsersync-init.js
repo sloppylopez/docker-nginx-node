@@ -24,5 +24,3 @@ bs.init(null, {
 });
 
 console.log(`Browser-Sync server listening on *:${BS_PORT}`);
-
-module.exports = bs;
