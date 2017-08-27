@@ -6,7 +6,7 @@ const app = express();
 const chalk = require('chalk');
 const log = console.log;
 
-require('./browsersync-init');
+require('./browsersync.init');
 
 app.use(express.static(path.join(__dirname, "../../app")));
 app.use(express.static(path.join(__dirname, "../../app/jspm_packages/github")));

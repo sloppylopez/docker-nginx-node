@@ -16,15 +16,17 @@ https://elephantseed.firebaseapp.com
 ## Vaseline driven browser side boiler-plate annihilation. Period
 
 ## Goodies working Out-of-the-box
-        NEW! Improved loading times in production bundle
+        NEW! Added Docker and Nginx with https support included
+        
+        Improved loading times in production bundle
 
-        Added working ESlint out-of-the-box
+        Working ESlint out-of-the-box
 
         Codeclimate ready
         
-        Added floating notifications using toastr
+        Floating notifications using toastr
         
-        Livereload using lite-server which is based in BrowserSync.
+        Livereload using BrowserSync and Express only.
         
         Firebase 3.0 friendly, just login with your account and deploy
         
@@ -44,8 +46,9 @@ https://elephantseed.firebaseapp.com
         Added 7 to 1 for managing styles 
         https://github.com/HugoGiraudel/sass-boilerplate
 
-        No Grunt/Gulp/Broccoli/Cake/Whatever... needed at the time of writing, 
-        let's see if we can build the whole seed without them (challenge accepted)
+        No Grunt/Gulp/Broccoli/Cake/Whatever... , after getting 90% of all the
+        intended functionalitites they weren't needed so far, and I highly doubt
+        they will be.
 
 ## Getting Started
 Make sure you have jspm installed before proceeding `npm install -g jspm`

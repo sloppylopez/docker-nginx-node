@@ -15,6 +15,8 @@
     "cacheclear:jspm": "bin/jspm/cacheclear",
     "lookup:jspm": "bin/jspm/lookup",
     "cleantree:jspm": "bin/jspm/cleantree",
+    "start:node": "bin/node/start",
+    "stop:node": "bin/node/stop",
     "buildcss:nodesass": "bin/nodesass/buildcss",
     "start:docker": "bin/docker/start",
     "stop:docker": "bin/docker/stop",
@@ -22,9 +24,7 @@
     "clean:docker": "bin/docker/clean",
     "exec:docker": "bin/docker/exec",
     "enter:docker": "bin/docker/enter",
-    "start:node": "bin/node/start",
-    "stop:node": "bin/node/stop",
-    "node:docker-standalone": "bin/node/docker-standalone"
+    "node:docker-standalone": "bin/docker/docker-standalone"
   },
   "repository": {
     "type": "git",
@@ -50,6 +50,7 @@
     "chalk": "^2.1.0",
     "express": "^4.15.2",
     "jspm": "^0.16.53",
+    "rimraf": "^2.6.1",
     "shelljs": "^0.7.8"
   }
 }
