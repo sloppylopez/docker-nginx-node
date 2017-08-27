@@ -10,16 +10,14 @@ const UNBUNDLE = 'npm run unbundle:jspm';
 
 function exec(command, options) {
   return new Promise((resolve, reject) => {
-    shell.exec(command, options,
-      (code, stdout, stderr) => {
-        if (stderr) reject(stderr);
-        log(chalk.magenta('(づ ￣ ³￣)づ ') + chalk.green('Reloaded application dependencies'));
-        resolve();
-      })
+    shell.exec(command, options, (code, stdout, stderr) => {
+      if (stderr) reject(stderr);
+      resolve();
+    })
   });
 }
 
-function getAppStatus() {
+function getDistFiles() {
   return new Promise((resolve, reject) => {
     fs.readdir(DIST_FOLDER, function (err, files) {
       if (err) reject(err);
@@ -28,11 +26,11 @@ function getAppStatus() {
   });
 }
 
-function reloadChanges(event, file) {
+function appChanges(event, file) {
   return new Promise((resolve) => {
     log(chalk.magenta('(づ ￣ ³￣)づ ') + chalk.green(`${event} => ${file}`));
     if (event === 'change' && file !== 'app/index.html') {
-      this.getAppStatus()
+      this.getDistFiles()
         .then(files => exec(!files.length ? UNBUNDLE : BUNDLE, {async: true}))
     } else {
       resolve()
@@ -43,6 +41,6 @@ function reloadChanges(event, file) {
 
 module.exports = {
   exec: exec,
-  getAppStatus: getAppStatus,
-  reloadChanges: reloadChanges
+  getDistFiles: getDistFiles,
+  appChanges: appChanges
 };
